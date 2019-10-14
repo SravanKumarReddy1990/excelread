@@ -76,7 +76,7 @@ String tempid=n+"";
   ResultSet resultSet = conn.prepareStatement("select id from users where userid='"+userid+"'").executeQuery();
  int id=0;
 while(resultSet.next()){
-i=resultSet.getInt("id" );
+id=resultSet.getInt("id" );
 }  
 resultSet.close();
 conn.close();
