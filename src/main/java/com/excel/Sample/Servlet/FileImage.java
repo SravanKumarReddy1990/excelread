@@ -79,7 +79,7 @@ int n = 100000 + rnd.nextInt(900000);
    ps.executeUpdate();
    ps.close();
 conn.close();
-		out.println("item.getName() : "+item.getName());			
+		out.println("n:"+n);			
 				} catch (Exception e) {
 					out.println("Excel Sample : "+e);
 				}
