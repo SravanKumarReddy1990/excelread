@@ -51,4 +51,16 @@
   	<servlet-name>FileImage</servlet-name>
   	<url-pattern>/FileImage</url-pattern>
   </servlet-mapping>
+
+ <servlet>
+  	<description>
+  	</description>
+  	<display-name>DisplayImage</display-name>
+  	<servlet-name>DisplayImage</servlet-name>
+  	<servlet-class>com.excel.Sample.Servlet.DisplayImage</servlet-class>
+  </servlet>
+ <servlet-mapping>
+  	<servlet-name>DisplayImage</servlet-name>
+  	<url-pattern>/DisplayImage</url-pattern>
+  </servlet-mapping>
 </web-app>
