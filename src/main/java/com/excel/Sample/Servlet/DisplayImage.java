@@ -25,17 +25,16 @@ public class DisplayImage extends HttpServlet {
 
 		byte[] byteImg = null;
 String imgname="";
-  bd connect = new bd();
   Connection connection = null;
  
 					 String url = "jdbc:postgresql://ec2-23-21-160-80.compute-1.amazonaws.com:5432/d4ovlnqvutd1j7";
             Connection connection = 							DriverManager.getConnection(url,"ckimwlfkyjkcvd","8a898408823185c78744e7bd54d71c87a4b0953ccd7271657265386796e24cbd");
    PreparedStatement ps = connection.prepareStatement("SELECT image,name FROM image WHERE id = ?");
-   ps.setInt(1, imgid);
+   ps.setInt(1, Integer.parseInt(imgid));
   ResultSet rs = ps.executeQuery();
    while (rs.next()) {
     byteImg = rs.getBytes(1);
-imgname=rs.getBytes(2);
+imgname=rs.getString(2);
    }
    rs.close();
    ps.close();
@@ -43,7 +42,7 @@ connection.close();
 
 		
 		response.setContentType("image/png");
-		response.setContentLength(byteImg.length());
+		response.setContentLength(byteImg.length);
 		
 		OutputStream outStream = response.getOutputStream();
 
