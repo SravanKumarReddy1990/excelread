@@ -54,9 +54,9 @@ public class Register extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 				try {
-String name=reguest.getParameter("name");
-String password=reguest.getParameter("password");
-String userid=reguest.getParameter("userid");
+String name=request.getParameter("name");
+String password=request.getParameter("password");
+String userid=request.getParameter("userid");
 Random rnd = new Random();
 int n = 100000 + rnd.nextInt(900000);
 String tempid=n+"";
