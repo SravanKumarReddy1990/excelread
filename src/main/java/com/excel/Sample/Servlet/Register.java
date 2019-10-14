@@ -73,13 +73,14 @@ String tempid=n+"";
    ps.executeUpdate();
    ps.close();
 
-  PreparedStatement ps1 = conn.prepareStatement("select tempid from users where userid='"+userid+"'");
-  String tempid= ps1.getString("tempid" );
- ps1.executeUpdate();
-   ps1.close();
-
+  ResultSet resultSet = conn.prepareStatement("select id from users where userid='"+userid+"'").executeQuery();
+ int id=0;
+while(resultSet.next()){
+i=resultSet.getInt("id" );
+}  
+resultSet.close();
 conn.close();
-		out.println("tempid:"+tempid);			
+		out.println("id:"+id);			
 				} catch (Exception e) {
 					out.println("Excel Sample : "+e);
 				}
