@@ -24,7 +24,7 @@
                ws.onmessage = function (evt) {
                   var received_msg = evt.data;
 var received_msg_json=JSON.parse(received_msg);
-	console.log(received_msg_json);
+	console.log("received from server : "+received_msg_json);
                   //alert("Message is received..."+received_msg_json.auth);
                };
 				
