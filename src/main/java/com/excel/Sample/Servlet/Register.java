@@ -61,25 +61,25 @@ Random rnd = new Random();
 int n = 100000 + rnd.nextInt(900000);
 String tempid=n+"";
 
-Random rnd = new Random();
-int n = 100000 + rnd.nextInt(900000);
+
 					 String url = "jdbc:postgresql://ec2-23-21-160-80.compute-1.amazonaws.com:5432/d4ovlnqvutd1j7";
             Connection conn = 							DriverManager.getConnection(url,"ckimwlfkyjkcvd","8a898408823185c78744e7bd54d71c87a4b0953ccd7271657265386796e24cbd");
    Statement statement = conn.createStatement();
    PreparedStatement ps = conn.prepareStatement("INSERT INTO users(name,password,userid,tempid) VALUES (?, ?, ?, ?)");
-   ps.setInt(1, name );
+   ps.setString(1, name );
    ps.setString(2, password );
    ps.setString(3, userid );
    ps.setString(4,tempid );
    ps.executeUpdate();
    ps.close();
 
-  PreparedStatement ps1 = conn.prepareStatement("select id from users where userid='"+userid+"'");
-  String id= ps1.getString("id" );
+  PreparedStatement ps1 = conn.prepareStatement("select tempid from users where userid='"+userid+"'");
+  String tempid= ps1.getString("tempid" );
+ ps1.executeUpdate();
    ps1.close();
 
 conn.close();
-		out.println("id:"+id);			
+		out.println("tempid:"+tempid);			
 				} catch (Exception e) {
 					out.println("Excel Sample : "+e);
 				}
