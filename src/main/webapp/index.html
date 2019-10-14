@@ -74,7 +74,7 @@
                             <h4 class="modal-title" id="myModalLabel">Registration form</h4>
                         </div>
                         <div class="modal-body">
-                            <form class="pb-modalreglog-form-reg">
+                            <form class="pb-modalreglog-form-reg" action="./Register" method="post">
                                 <div class="form-group">
                                     <div id="pb-modalreglog-progressbar"></div>
                                 </div>
@@ -82,14 +82,21 @@
                                     <label for="email">Email address</label>
                                     <div class="input-group pb-modalreglog-input-group">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                        <input type="email" class="form-control" id="inputEmail" name="userid" placeholder="Email Address">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Name</label>
+                                    <div class="input-group pb-modalreglog-input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
+                                        <input type="text" class="form-control" id="countries" name="name" placeholder="Name">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
                                     <div class="input-group pb-modalreglog-input-group">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                        <input type="password" class="form-control" id="inputPws" placeholder="Password">
+                                        <input type="password" class="form-control" name="password" id="inputPws" placeholder="Password">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -99,23 +106,7 @@
                                         <input type="password" class="form-control" id="inputConfirmPws" placeholder="Confirm Password">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="country">Country</label>
-                                    <div class="input-group pb-modalreglog-input-group">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
-                                        <input type="text" class="form-control" id="countries" placeholder="Country">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="age">Age</label>
-                                    <div class="input-group pb-modalreglog-input-group">
-                                        <input id="age">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="ch" name="chs">
-                                    I agree with <a href="#">terms and conditions.</a>
-                                </div>
+                                
                             </form>
                         </div>
                         <div class="modal-footer">
