@@ -67,13 +67,13 @@ public class FileImage extends HttpServlet {
 				}
 				FileItem item = (FileItem) items.get(0);
 				try {
-long l=(long)Math.random()*1000000000000L;
+int n = 100000 + random_float() * 900000;
 
 					 String url = "jdbc:postgresql://ec2-23-21-160-80.compute-1.amazonaws.com:5432/d4ovlnqvutd1j7";
             Connection conn = 							DriverManager.getConnection(url,"ckimwlfkyjkcvd","8a898408823185c78744e7bd54d71c87a4b0953ccd7271657265386796e24cbd");
    Statement statement = conn.createStatement();
    PreparedStatement ps = conn.prepareStatement("INSERT INTO images VALUES (?, ?, ?)");
-   ps.setInt(1, l.intValue());
+   ps.setInt(1, n);
    ps.setString(2, item.getName());
    ps.setBytes(3, readFully(item.getInputStream()));
    ps.executeUpdate();
