@@ -40,5 +40,15 @@
   	<url-pattern>/FormSample</url-pattern>
   </servlet-mapping>
     
-    
+     <servlet>
+  	<description>
+  	</description>
+  	<display-name>FileImage</display-name>
+  	<servlet-name>FileImage</servlet-name>
+  	<servlet-class>com.excel.Sample.Servlet.FileImage</servlet-class>
+  </servlet>
+ <servlet-mapping>
+  	<servlet-name>FileImage</servlet-name>
+  	<url-pattern>/FileImage</url-pattern>
+  </servlet-mapping>
 </web-app>
