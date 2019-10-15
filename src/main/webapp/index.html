@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
 
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstratp.min.js"></script>
 </head>
 <body>
 
@@ -37,8 +37,9 @@
                             </button>
                             <h4 class="modal-title" id="myModalLabel">Login form</h4>
                         </div>
+
+                            <form action="./Login" method="post">
                         <div class="modal-body">
-                            <form>
                                 <div class="form-group">
                                     <label for="email">Email address</label>
                                     <div class="input-group pb-modalreglog-input-group">
@@ -53,12 +54,12 @@
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
                                     </div>
                                 </div>
-                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <a href="dashboard.html"><button type="button" class="btn btn-primary">Log in</button></a>
+          <input type="button" class="btn btn-primary" value="Log in"></input>
                         </div>
+                            </form>
                     </div>
                 </div>
             </div>
