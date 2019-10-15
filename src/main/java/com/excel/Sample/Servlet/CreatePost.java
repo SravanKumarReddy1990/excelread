@@ -58,13 +58,14 @@ Random rnd = new Random();
 
 	String url = "jdbc:postgresql://ec2-23-21-160-80.compute-1.amazonaws.com:5432/d4ovlnqvutd1j7";
         Connection conn = 							DriverManager.getConnection(url,"ckimwlfkyjkcvd","8a898408823185c78744e7bd54d71c87a4b0953ccd7271657265386796e24cbd");
-    ResultSet resultSet = conn.prepareStatement("select id,userid from users where tempid='"+tempid+"'").executeQuery();
+ 
+   ResultSet resultSet = conn.prepareStatement("select id,userid from users where tempid='"+tempid+"'").executeQuery();
  int id=0;
 String userid="";
 while(resultSet.next()){
 id=resultSet.getInt("id" );
 userid=resultSet.getString("userid" );
-   PreparedStatement ps = conn.prepareStatement("INSERT INTO posts(title,desc,userid) VALUES ( ?, ?, ?)");
+   PreparedStatement ps = conn.prepareStatement("INSERT INTO posts(p_title,p_desc,userid) VALUES ( ?, ?, ?)");
    ps.setString(1, title );
    ps.setString(2, desc );
    ps.setString(3,userid );
