@@ -69,7 +69,7 @@ ResultSet resultSet = conn.prepareStatement("select id from users where userid= 
 while(resultSet.next()){
 id=resultSet.getInt("id" );
 
-   PreparedStatement ps = conn.prepareStatement("update table users tempid='"+tempid+"' where userid='"+userid+"'");
+   PreparedStatement ps = conn.prepareStatement("update users tempid='"+tempid+"' where userid='"+userid+"'");
    ps.executeUpdate();
    ps.close();
 
