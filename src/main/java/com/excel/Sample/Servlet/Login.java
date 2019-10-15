@@ -64,7 +64,7 @@ String tempid=n+"";
 					 String url = "jdbc:postgresql://ec2-23-21-160-80.compute-1.amazonaws.com:5432/d4ovlnqvutd1j7";
             Connection conn = 							DriverManager.getConnection(url,"ckimwlfkyjkcvd","8a898408823185c78744e7bd54d71c87a4b0953ccd7271657265386796e24cbd");
 
-ResultSet resultSet = conn.prepareStatement("select id from users where userid= '"+userid+"' and password='"+password+"'").executeQuery();
+ResultSet resultSet = conn.prepareStatement("select id from users where userid='"+userid+"' and password='"+password+"'").executeQuery();
  int id=0;
 while(resultSet.next()){
 id=resultSet.getInt("id" );
