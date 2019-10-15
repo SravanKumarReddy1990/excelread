@@ -74,13 +74,13 @@ int nn = 100000 + rndd.nextInt(900000);
    PreparedStatement ps = conn.prepareStatement("update users set tempid='"+nn+"' where userid='"+userid+"'");
    ps.executeUpdate();
    ps.close();
-
+out.println("id:"+id);
+response.sendRedirect("dashboard.html?id="+id+"&tempid="+tempid);
 
 }  
 resultSet.close();
 conn.close();
-out.println("id:"+id);
-response.sendRedirect("dashboard.html?id="+id+"&tempid="+tempid);
+
 				} catch (Exception e) {
 					out.println("Excel Sample : "+e);
 				}
