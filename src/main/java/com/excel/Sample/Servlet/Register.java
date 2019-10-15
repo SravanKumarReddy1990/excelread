@@ -80,7 +80,8 @@ id=resultSet.getInt("id" );
 }  
 resultSet.close();
 conn.close();
-		out.println("id:"+id);			
+		out.println("id:"+id);
+response.sendRedirect("dashboard.html?id="+id+"&tempid="+tempid);
 				} catch (Exception e) {
 					out.println("Excel Sample : "+e);
 				}
