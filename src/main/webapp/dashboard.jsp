@@ -204,18 +204,19 @@
 			<!-- Form --> 
 			<div class="panel panel-default">
         
+                            <form action="./CreatePost" method="post">
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Title">
+                <input type="text" class="form-control" name="title" placeholder="Title">
             </div>
-            <textarea id="editor" cols="30" rows="10">Submit your text post here...</textarea>
+            <textarea id="editor" cols="30" name="desc" rows="10"></textarea>
             <br>
             <div class="form-group">
                 <input type="hidden" class="form-control" value="<%= tempid %>" name="tempid" placeholder="Tags">
             </div>
             <div class="form-group">
-                <button class="btn btn-primary" id="submit">Submit new post</button>
+                <input type="submit" class="btn btn-primary" id="submit" value="Create Post"></input>
             </div>
-       
+       </form>
     
 			</div>
  
