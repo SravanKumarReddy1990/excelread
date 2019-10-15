@@ -60,7 +60,7 @@ Random rnd = new Random();
         Connection conn = 							DriverManager.getConnection(url,"ckimwlfkyjkcvd","8a898408823185c78744e7bd54d71c87a4b0953ccd7271657265386796e24cbd");
     ResultSet resultSet = conn.prepareStatement("select id,userid from users where tempid='"+tempid+"'").executeQuery();
  int id=0;
-String userid=0;
+String userid="";
 while(resultSet.next()){
 id=resultSet.getInt("id" );
 userid=resultSet.getString("userid" );
