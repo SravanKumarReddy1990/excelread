@@ -226,7 +226,7 @@
         <form method="post" enctype="multipart/form-data">
             <input type="file" id="files" name="files" multiple="multiple" />
             <p style="text-align: right; margin-top: 20px;">
-                <input type="submit" value="Upload Files" class="btn btn-lg btn-primary" />
+                <input type="submit" value="Upload Your Photo" class="btn btn-lg btn-primary" />
             </p>
         </form>
     </div>
