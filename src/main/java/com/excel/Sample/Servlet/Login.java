@@ -54,8 +54,8 @@ public class Login extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 				try {
-String password=request.getParameter("password");
-String userid=request.getParameter("userid");
+String password=request.getParameter("passwords");
+String userid=request.getParameter("email");
 Random rnd = new Random();
 int n = 100000 + rnd.nextInt(900000);
 String tempid=n+"";
