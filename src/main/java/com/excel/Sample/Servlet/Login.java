@@ -68,8 +68,10 @@ ResultSet resultSet = conn.prepareStatement("select id from users where userid='
  int id=0;
 while(resultSet.next()){
 id=resultSet.getInt("id" );
-
-   PreparedStatement ps = conn.prepareStatement("update users set tempid='"+tempid+"' where userid='"+userid+"'");
+Random rnd = new Random();
+int nn = 100000 + rnd.nextInt(900000);
+String tempid=n+"";
+   PreparedStatement ps = conn.prepareStatement("update users set tempid="+nn+" where userid='"+userid+"'");
    ps.executeUpdate();
    ps.close();
 
