@@ -35,7 +35,7 @@
 </head>
 
 <body>
-<%String tempid=request.getParameter("tempid") %>
+<%String tempid=request.getParameter("tempid"); %>
 <div id="tempid" style="display:none"><%= tempid %></div>
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
