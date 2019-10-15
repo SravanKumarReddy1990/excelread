@@ -35,7 +35,8 @@
 </head>
 
 <body>
-
+<%String tempid=request.getParameter("tempid") %>
+<div id="tempid" style="display:none"><%= tempid %></div>
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -209,7 +210,7 @@
             <textarea id="editor" cols="30" rows="10">Submit your text post here...</textarea>
             <br>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Tags">
+                <input type="hidden" class="form-control" value="<%= tempid %>" name="tempid" placeholder="Tags">
             </div>
             <div class="form-group">
                 <button class="btn btn-primary" id="submit">Submit new post</button>
