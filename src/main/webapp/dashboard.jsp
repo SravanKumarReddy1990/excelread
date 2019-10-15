@@ -222,7 +222,7 @@
  
 			<!-- Text Panel -->
 			
-				<div class="col-md-8">
+				<div class="col-md-4">
         <form method="post" enctype="multipart/form-data">
             <input type="file" id="files" name="files" multiple="multiple" />
             <p style="text-align: right; margin-top: 20px;">
