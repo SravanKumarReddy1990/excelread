@@ -64,7 +64,7 @@ String userid="";
 while(resultSet.next()){
 id=resultSet.getInt("id" );
 userid=resultSet.getString("userid" );
-   PreparedStatement ps = conn.prepareStatement("INSERT INTO users(title,desc,userid) VALUES ( ?, ?, ?)");
+   PreparedStatement ps = conn.prepareStatement("INSERT INTO posts(title,desc,userid) VALUES ( ?, ?, ?)");
    ps.setString(1, title );
    ps.setString(2, desc );
    ps.setString(3,userid );
