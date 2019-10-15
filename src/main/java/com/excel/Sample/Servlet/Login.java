@@ -71,7 +71,7 @@ id=resultSet.getInt("id" );
 Random rndd = new Random();
 int nn = 100000 + rndd.nextInt(900000);
 
-   PreparedStatement ps = conn.prepareStatement("update users set tempid="+nn+" where userid='"+userid+"'");
+   PreparedStatement ps = conn.prepareStatement("update users set tempid='"+nn+"' where userid='"+userid+"'");
    ps.executeUpdate();
    ps.close();
 
