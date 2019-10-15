@@ -63,7 +63,7 @@ Random rnd = new Random();
 String userid=0;
 while(resultSet.next()){
 id=resultSet.getInt("id" );
-userid=resultSet.getInt("userid" );
+userid=resultSet.getString("userid" );
    PreparedStatement ps = conn.prepareStatement("INSERT INTO users(title,desc,userid) VALUES ( ?, ?, ?)");
    ps.setString(1, title );
    ps.setString(2, desc );
