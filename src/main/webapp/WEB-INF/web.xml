@@ -90,4 +90,17 @@
   	<url-pattern>/Login</url-pattern>
   </servlet-mapping>
 
+
+<servlet>
+  	<description>
+  	</description>
+  	<display-name>CreatePost</display-name>
+  	<servlet-name>CreatePost</servlet-name>
+  	<servlet-class>com.excel.Sample.Servlet.CreatePost</servlet-class>
+  </servlet>
+ <servlet-mapping>
+  	<servlet-name>CreatePost</servlet-name>
+  	<url-pattern>/CreatePost</url-pattern>
+  </servlet-mapping>
+
 </web-app>
