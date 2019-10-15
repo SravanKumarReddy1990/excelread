@@ -221,8 +221,8 @@
 			</div>
  
 			<!-- Text Panel -->
-			<div class="panel panel-default">
-				<div class="col-md-4">
+			
+				<div class="col-md-8">
         <form method="post" enctype="multipart/form-data">
             <input type="file" id="files" name="files" multiple="multiple" />
             <p style="text-align: right; margin-top: 20px;">
@@ -230,7 +230,6 @@
             </p>
         </form>
     </div>
-		</div>	
 
 
 	  </div><!--/Right Column -->
