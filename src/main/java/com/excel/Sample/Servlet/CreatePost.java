@@ -18,13 +18,13 @@ import java.io.*;
 /**
  * Servlet implementation class ExcelSample
  */
-public class Register extends HttpServlet {
+public class CreatePost extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public Register() {
+	public CreatePost() {
 		super();
 
 		// TODO Auto-generated constructor stub
@@ -49,34 +49,39 @@ public class Register extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 				try {
-String name=request.getParameter("name");
-String password=request.getParameter("password");
-String userid=request.getParameter("userid");
+String title=request.getParameter("title");
+String desc=request.getParameter("desc");
+String tempid=request.getParameter("tempid");
 Random rnd = new Random();
-int n = 100000 + rnd.nextInt(900000);
-String tempid=n+"";
+   int n = 100000 + rnd.nextInt(900000);
 
 
-					 String url = "jdbc:postgresql://ec2-23-21-160-80.compute-1.amazonaws.com:5432/d4ovlnqvutd1j7";
-            Connection conn = 							DriverManager.getConnection(url,"ckimwlfkyjkcvd","8a898408823185c78744e7bd54d71c87a4b0953ccd7271657265386796e24cbd");
-   Statement statement = conn.createStatement();
-   PreparedStatement ps = conn.prepareStatement("INSERT INTO users(name,password,userid,tempid) VALUES (?, ?, ?, ?)");
-   ps.setString(1, name );
-   ps.setString(2, password );
-   ps.setString(3, userid );
-   ps.setString(4,tempid );
+	String url = "jdbc:postgresql://ec2-23-21-160-80.compute-1.amazonaws.com:5432/d4ovlnqvutd1j7";
+        Connection conn = 							DriverManager.getConnection(url,"ckimwlfkyjkcvd","8a898408823185c78744e7bd54d71c87a4b0953ccd7271657265386796e24cbd");
+    ResultSet resultSet = conn.prepareStatement("select id,userid from users where tempid='"+tempid+"'").executeQuery();
+ int id=0;
+String userid=0;
+while(resultSet.next()){
+id=resultSet.getInt("id" );
+userid=resultSet.getInt("userid" );
+   PreparedStatement ps = conn.prepareStatement("INSERT INTO users(title,desc,userid) VALUES ( ?, ?, ?)");
+   ps.setString(1, title );
+   ps.setString(2, desc );
+   ps.setString(3,userid );
    ps.executeUpdate();
    ps.close();
 
-  ResultSet resultSet = conn.prepareStatement("select id from users where userid='"+userid+"'").executeQuery();
- int id=0;
-while(resultSet.next()){
-id=resultSet.getInt("id" );
+   
+   PreparedStatement pss = conn.prepareStatement("update users set tempid='"+n+"' where id='"+id+"'");
+   pss.executeUpdate();
+   pss.close();
+
+ 
 }  
 resultSet.close();
 conn.close();
 		out.println("id:"+id);
-response.sendRedirect("dashboard.html?id="+id+"&tempid="+tempid);
+response.sendRedirect("dashboard.jsp?id="+id+"&tempid="+n);
 				} catch (Exception e) {
 					out.println("Excel Sample : "+e);
 				}

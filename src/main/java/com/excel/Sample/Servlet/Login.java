@@ -75,7 +75,7 @@ int nn = 100000 + rndd.nextInt(900000);
    ps.executeUpdate();
    ps.close();
 out.println("id:"+id);
-response.sendRedirect("dashboard.html?id="+id+"&tempid="+nn);
+response.sendRedirect("dashboard.jsp?id="+id+"&tempid="+nn);
 
 }  
 resultSet.close();
