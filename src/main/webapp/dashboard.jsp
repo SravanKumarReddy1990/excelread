@@ -221,7 +221,7 @@
 			</div>
  
 			<!-- Text Panel -->
-			
+			<div class="panel panel-default">
 				<div class="col-md-4">
         <form method="post" enctype="multipart/form-data">
             <input type="file" id="files" name="files" multiple="multiple" />
@@ -230,7 +230,7 @@
             </p>
         </form>
     </div>
-			
+		</div>	
 
 
 	  </div><!--/Right Column -->
@@ -313,12 +313,6 @@
 <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
 <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css" />
 <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
-
-<script type="text/javascript">
-    jQuery(function ($) {
-        $("#files").shieldUpload();
-    });
-</script>
 
 <script>
     $(function () {
