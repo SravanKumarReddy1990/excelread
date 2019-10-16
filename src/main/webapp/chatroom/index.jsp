@@ -11,7 +11,23 @@
         <link rel="stylesheet" href="css/style.css">
 
     
-    
+    <script type="text/javascript">
+createDatabase();
+function createDatabase(){
+    try{
+     if(window.openDatabase){
+             var shortName   =  'db_edentiti';
+             var version   =  '1.0';
+             var displayName  =  'Edentiti Information';
+             var maxSize   =  65536; // in bytes
+             db    =  openDatabase(shortName, version, displayName, maxSize);
+                    alert('Sqlite Database created');
+         }
+    }catch(e){
+     alert(e);
+    }
+ }
+</script>
     
   </head>
 
