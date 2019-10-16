@@ -51,7 +51,7 @@ while(resultSet.next()){ %>
 					<li>
 						<img width="50" height="50" src="http://cs625730.vk.me/v625730358/1126a/qEjM1AnybRA.jpg">
 						<div class="info">
-							<div class="user" id="<%=resultSet.getInt("id") %>" ><%=resultSet.getString("name") %></div>
+							<div class="user" id="<%=resultSet.getInt("id") %>" onclick="userUI(this)"><%=resultSet.getString("name") %></div>
 							<div class="status on"> online</div>
 						</div>
 					</li>
@@ -75,9 +75,9 @@ conn.close();
 				<li class="i">
 					<div class="head">
 						<span class="time">10:13 AM, Today</span>
-						<span class="name">Буль</span>
+						<span class="name">sra</span>
 					</div>
-					<div class="message">Привет!</div>
+					<div class="message">How R U</div>
 				</li>
 				
 			</ul>
