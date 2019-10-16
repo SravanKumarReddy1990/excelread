@@ -96,10 +96,10 @@
 			<!-- List-Group Panel -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> Completely Synergize</h1>
+					<h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> Other</h1>
 				</div>
 				<div class="list-group">
-					<a href="#" class="list-group-item">Resource Taxing</a>
+					<a href="./chatandcontact" target="_blank" class="list-group-item">Chat Room</a>
 					<a href="#" class="list-group-item">Premier Niche Markets <span class="badge">New</span></a>
 					<a href="#" class="list-group-item">Dynamically Innovate</a>
 					<a href="#" class="list-group-item">Objectively Innovate</a>
