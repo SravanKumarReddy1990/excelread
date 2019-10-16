@@ -19,6 +19,7 @@ import java.sql.*;
 import java.util.Random;
 import java.net.*;
 import java.io.*;
+import javax.servlet.http.*;  
 
 /**
  * Servlet implementation class ExcelSample
@@ -75,6 +76,8 @@ int nn = 100000 + rndd.nextInt(900000);
    ps.executeUpdate();
    ps.close();
 out.println("id:"+id);
+    HttpSession session=request.getSession();  
+        session.setAttribute("id",id); 
 response.sendRedirect("dashboard.jsp?id="+id+"&tempid="+nn);
 
 }  
