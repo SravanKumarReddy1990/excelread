@@ -30,12 +30,12 @@
             Connection conn = 							DriverManager.getConnection(url,"ckimwlfkyjkcvd","8a898408823185c78744e7bd54d71c87a4b0953ccd7271657265386796e24cbd");
 
 ResultSet resultSet = conn.prepareStatement("select id,name,imageid from users").executeQuery();
- int id=0;
+
 while(resultSet.next()){ %>
 					<li>
 						<img width="50" height="50" src="http://cs625730.vk.me/v625730358/1126a/qEjM1AnybRA.jpg">
 						<div class="info">
-							<div class="user"><%=resultSet.getString("name"); %></div>
+							<div class="user" id="<%=resultSet.getString("id"); %>" ><%=resultSet.getString("name"); %></div>
 							<div class="status on"> online</div>
 						</div>
 					</li>
