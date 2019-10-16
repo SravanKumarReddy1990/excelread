@@ -2,7 +2,7 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>5 Живой чат / Live chat </title>
+    <title> Live chat </title>
     
     
     <link rel="stylesheet" href="css/normalize.css">
