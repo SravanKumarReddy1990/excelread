@@ -41,8 +41,9 @@
  userUI = function(e) {
     var innerText, otvet;
     innerText = e.id;
+var imgid=document.getElementById("imageid"+innerText).innerHTML
     if (innerText !== "") {
-      $(".top").html("<div class=\"avatar\"><img width=\"50\" height=\"50\" src=\"http://cs625730.vk.me/v625730358/1126a/qEjM1AnybRA.jpg\"></div><div class=\"info\"><div class=\"name\">"+document.getElementById(innerText).innerHTML+"</div><div class=\"count\"> </div></div><i class=\"fa fa-star\"></i>");
+      $(".top").html("<div class=\"avatar\"><img width=\"50\" height=\"50\" src=\"./DisplayImage?imgid="+imgid+"\"></div><div class=\"info\"><div class=\"name\">"+document.getElementById(innerText).innerHTML+"</div><div class=\"count\"> </div></div><i class=\"fa fa-star\"></i>");
       
       return true;
     }
