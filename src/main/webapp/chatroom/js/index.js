@@ -44,7 +44,7 @@
 var imid="image"+innerText+"";
 var imgid=document.getElementById(imid).innerHTML;
     if (innerText !== "") {
-      $(".top").html("<div class=\"avatar\"><img width=\"50\" height=\"50\" src=\"./DisplayImage?imgid="+imgid+"\"></div><div class=\"info\"><div class=\"name\">"+document.getElementById(innerText).innerHTML+"</div><div class=\"count\"> </div></div><i class=\"fa fa-star\"></i>");
+      $(".top").html("<div class=\"avatar\"><img width=\"50\" height=\"50\" src=\"/DisplayImage?imgid="+imgid+"\"></div><div class=\"info\"><div class=\"name\">"+document.getElementById(innerText).innerHTML+"</div><div class=\"count\"> </div></div><i class=\"fa fa-star\"></i>");
       
       return true;
     }
