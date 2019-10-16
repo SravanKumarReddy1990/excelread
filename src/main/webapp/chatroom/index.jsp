@@ -16,7 +16,9 @@
   </head>
 
   <body>
-<%String name=(id)session.getAttribute("id");  %>
+<%@ page import="java.sql.*" %>
+
+<%String id=(String)session.getAttribute("id");  %>
     	<div class="ui">
 		<div class="left-menu">
 				<form action="#" class="search">
