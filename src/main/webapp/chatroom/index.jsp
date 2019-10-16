@@ -49,7 +49,7 @@ ResultSet resultSet = conn.prepareStatement("select id,name,imageid from users")
 
 while(resultSet.next()){ %>
 					<li>
-						<img width="50" height="50" src="http://cs625730.vk.me/v625730358/1126a/qEjM1AnybRA.jpg">
+						<img width="50" height="50" src="/DisplayImage?imgid=<%= resultSet.getString("imageid") %>">
 						<div class="info">
 							<div class="user" id="<%=resultSet.getInt("id") %>" onclick="userUI(this)"><%=resultSet.getString("name") %></div>
 <div id="image<%=resultSet.getInt("id") %>" style="display:none"><%= resultSet.getString("imageid") %></div>
@@ -64,7 +64,7 @@ conn.close();
 		<div class="chat">
 			<div class="top">
 				<div class="avatar">
-					<img width="50" height="50" src="http://cs625730.vk.me/v625730358/1126a/qEjM1AnybRA.jpg">
+					<img width="50" height="50" src="">
 				</div>
 				<div class="info">
 					<div class="name">Name</div>
