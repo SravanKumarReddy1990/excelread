@@ -18,7 +18,7 @@
   <body>
 <%@ page import="java.sql.*" %>
 
-<%String id=(String)session.getAttribute("id");  %>
+<%String id=((Integer)session.getAttribute("id"))+"";  %>
     	<div class="ui">
 		<div class="left-menu">
 				<form action="#" class="search">
