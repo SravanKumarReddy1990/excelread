@@ -35,7 +35,7 @@ while(resultSet.next()){ %>
 					<li>
 						<img width="50" height="50" src="http://cs625730.vk.me/v625730358/1126a/qEjM1AnybRA.jpg">
 						<div class="info">
-							<div class="user" id="<%=resultSet.getString("id"); %>" ><%=resultSet.getString("name"); %></div>
+							<div class="user" id="<%=resultSet.getString("id") %>" ><%=resultSet.getString("name") %></div>
 							<div class="status on"> online</div>
 						</div>
 					</li>
