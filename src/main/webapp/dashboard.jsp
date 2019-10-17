@@ -35,6 +35,7 @@
 </head>
 
 <body>
+<%@ page import="java.sql.*" %>
 <%String tempid=request.getParameter("tempid"); %>
 <div id="tempid" style="display:none"><%= tempid %></div>
     <!-- Navigation -->
