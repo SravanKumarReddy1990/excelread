@@ -27,7 +27,14 @@ $(document).ready(function(){
 		}
 	});
 		
-	
+	$("#maps").click(function(){
+	window.open("map.html","_self");
+
+	});
+$("#friends").click(function(){
+	window.open("index.html","_self");
+
+	});	
 	$(".friend").each(function(){		
 		$(this).click(function(){
 			var childOffset = $(this).offset();
