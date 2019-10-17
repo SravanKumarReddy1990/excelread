@@ -16,31 +16,30 @@ body {
 }
 #view-code:hover{opacity:1;}
 #chatbox{
-	width:290px;
+	width:100%;
 	background:#fff;
 	border-radius:6px;
 	overflow:hidden;
-	height:484px;
+	height:100%;
 	position:absolute;
-	top:100px;
-	left:50%;
-	margin-left:-155px;
+	top:0%;
+	left:0%;
 }
 
 #friendslist{
 	position:absolute;
 	top:0;
 	left:0;
-	width:290px;
+	width:100%;
 	height:484px;
 }
 #topmenu{
 	height:69px;
-	width:290px;
+	width:100%;
 	border-bottom:1px solid #d8dfe3;	
 }
 #topmenu span{
-	float:left;	
+	float:left;		
 	width: 96px;
     height: 70px;
     background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/top-menu.png") -3px -118px no-repeat;
@@ -103,27 +102,28 @@ body {
 #search{
 	background:#e3e9ed url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/search.png") -11px 0 no-repeat;
 	height:60px;
-	width:290px;
+	width:100%;
 	position:absolute;
 	bottom:0;
 	left:0;
 }
 #searchfield{
+        width:100%;
 	background:#e3e9ed;
 	margin:21px 0 0 55px;
 	border:none;
 	padding:0;
 	font-size:14px;
 	font-family:"Open Sans", sans-serif; 
-	font-weight:400px;
+	font-weight:100%;
 	color:#8198ac;
 }
 #searchfield:focus{
 	 outline: 0;
 }
 #chatview{
-	width:290px;
-	height:484px;
+	width:100%;
+	height:100%;
 	position:absolute;
 	top:0;
 	left:0;	
@@ -131,6 +131,7 @@ body {
 	background:#fff;
 }
 #profile{
+        width:100%;
 	height:153px;
 	overflow:hidden;
 	text-align:center;
@@ -172,7 +173,7 @@ body {
 #chat-messages{
 	opacity:0;
 	margin-top:30px;
-	width:290px;
+	width:100%;
 	height:270px;
 	overflow-y:scroll;	
 	overflow-x:hidden;
@@ -258,7 +259,7 @@ div.message.right .corner{
 	position:absolute;
 	bottom:0;
 	right:0px;
-	width:290px;
+	width:100%;
 	background:#fff;
 	padding-bottm:50px;
 }
@@ -266,6 +267,7 @@ div.message.right .corner{
 	border
 }
 #sendmessage input{
+        width:100%;
 	background:#fff;
 	margin:21px 0 0 21px;
 	border:none;
