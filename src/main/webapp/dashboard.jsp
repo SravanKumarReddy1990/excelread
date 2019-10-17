@@ -208,7 +208,7 @@
             <div class="form-group">
                 <input type="text" class="form-control" name="title" placeholder="Title">
             </div>
-            <textarea id="editor" cols="30" name="desc" rows="10"></textarea>
+            <textarea id="editor" cols="35" name="desc" rows="12"></textarea>
             <br>
             <div class="form-group">
                 <input type="hidden" class="form-control" value="<%= tempid %>" name="tempid" placeholder="Tags">
