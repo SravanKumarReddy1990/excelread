@@ -28,11 +28,11 @@ $(document).ready(function(){
 	});
 		
 	$("#maps").click(function(){
-	window.open("map.html","_self");
+	window.location="map.html";
 
 	});
 $("#friends").click(function(){
-	window.open("index.html","_self");
+	window.location="index.html";
 
 	});	
 	$(".friend").each(function(){		
