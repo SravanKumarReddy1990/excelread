@@ -7,7 +7,10 @@ var gridlayer=new ol.layer.Vector({
          url: 'tnparliament.geojson'
       })
   });
-
+var mainview= new ol.View({
+        center: ol.proj.transform([78.38745117187499,11.86466302072273], 'EPSG:4326', 'EPSG:3857'),
+        zoom: 10
+    });
 var map = new ol.Map({
     target: 'map',
     layers: [
@@ -15,10 +18,7 @@ var map = new ol.Map({
       source: new ol.source.OSM()
     })
     ],
-    view: new ol.View({
-        center: ol.proj.transform([78.38745117187499,11.86466302072273], 'EPSG:4326', 'EPSG:3857'),
-        zoom: 10
-    })
+    view:mainview
 });
 
 map.on('click', function(evt) {
@@ -53,7 +53,7 @@ var lonlat = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
 if(received_msg_json.contentType.localeCompare("loc")==0){
 var contents=received_msg_json.content;
 var con=contents.split(",");
-var centerLongitudeLatitude = ol.proj.fromLonLat([con[1], con[0]]);
+var centerLongitudeLatitude = ol.proj.fromLonLat([con[0], con[1]]);
 var layer = new ol.layer.Vector({
   source: new ol.source.Vector({
     projection: 'EPSG:4326',
@@ -71,8 +71,11 @@ var layer = new ol.layer.Vector({
     })
   ]
 });
-//map.getView().setCenter(ol.proj.transform([con[0], con[1]], 'EPSG:4326', 'EPSG:3857'));
-//map.getView().setZoom(5);
+mainview=new ol.View({
+        center: ol.proj.transform([78.38745117187499,11.86466302072273], 'EPSG:4326', 'EPSG:3857'),
+        zoom: 10
+    });
+map.setView(mainview);
 map.addLayer(layer);
 }
 
