@@ -57,7 +57,7 @@ var centerLongitudeLatitude = ol.proj.fromLonLat([con[0], con[1]]);
 var layer = new ol.layer.Vector({
   source: new ol.source.Vector({
     projection: 'EPSG:4326',
-    features: [new ol.Feature(new ol.geom.Circle(centerLongitudeLatitude, 40))]
+    features: [new ol.Feature(new ol.geom.Circle(centerLongitudeLatitude, 4000))]
   }),
   style: [
     new ol.style.Style({
@@ -71,6 +71,8 @@ var layer = new ol.layer.Vector({
     })
   ]
 });
+map.getView().setCenter(ol.proj.transform([con[0], con[1]], 'EPSG:3857', 'EPSG:4326'));
+map.getView().setZoom(5);
 map.addLayer(layer);
 }
 
