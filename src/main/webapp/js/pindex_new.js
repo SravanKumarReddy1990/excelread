@@ -13,7 +13,7 @@ var map = new ol.Map({
     layers: [
     new ol.layer.Tile({
       source: new ol.source.OSM()
-    }),gridlayer
+    })
     ],
     view: new ol.View({
         center: ol.proj.transform([78.38745117187499,11.86466302072273], 'EPSG:4326', 'EPSG:3857'),
@@ -40,7 +40,7 @@ var lonlat = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
                ws.onopen = function() {
                   console.log("Connected")
                   // Web Socket is connected, send data using send()
-                  ws.send('{"from":"all","to":"sravan","content":"sdmv n","status":"jsn vjsd","contentType":"usermsg"}');
+                  //ws.send('{"from":"all","to":"sravan","content":"sdmv n","status":"jsn vjsd","contentType":"usermsg"}');
                   //alert("Message is sent...");
                };
 				
@@ -53,7 +53,7 @@ var lonlat = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
 if(received_msg_json.contentType.localeCompare("loc")==0){
 var contents=received_msg_json.content;
 var con=contents.split(",");
-var centerLongitudeLatitude = ol.proj.fromLonLat([con[0], con[1]]);
+var centerLongitudeLatitude = ol.proj.fromLonLat([con[1], con[0]]);
 var layer = new ol.layer.Vector({
   source: new ol.source.Vector({
     projection: 'EPSG:4326',
@@ -71,8 +71,8 @@ var layer = new ol.layer.Vector({
     })
   ]
 });
-map.getView().setCenter(ol.proj.transform([con[1], con[0]], 'EPSG:4326', 'EPSG:3857'));
-map.getView().setZoom(5);
+//map.getView().setCenter(ol.proj.transform([con[0], con[1]], 'EPSG:4326', 'EPSG:3857'));
+//map.getView().setZoom(5);
 map.addLayer(layer);
 }
 
