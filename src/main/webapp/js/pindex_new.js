@@ -46,12 +46,14 @@ var lonlat = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
 				
                ws.onmessage = function (evt) {
                   var received_msg = evt.data;
-	var received_msg_json=JSON.parse(received_msg);
+	var received_msg_json=JSON.parse(received_msg.content);
 	console.log("received from server : "+JSON.stringify(received_msg_json));
                   //alert("Message is received..."+received_msg_json.auth);
 
-if(received_msg.alllocation==1){
-var centerLongitudeLatitude = ol.proj.fromLonLat([received_msg.longitude, received_msg.latitude]);
+if(received_msg.contentType=="loc"){
+var contents=received_msg.content;
+var con[]=contents.spilt(",");
+var centerLongitudeLatitude = ol.proj.fromLonLat([con[0], con[1]]);
 var layer = new ol.layer.Vector({
   source: new ol.source.Vector({
     projection: 'EPSG:4326',
