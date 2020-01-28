@@ -72,7 +72,7 @@ var layer = new ol.layer.Vector({
   ]
 });
 mainview=new ol.View({
-        center: ol.proj.transform([78.38745117187499,11.86466302072273], 'EPSG:4326', 'EPSG:3857'),
+        center: ol.proj.transform([con[0],con[1]], 'EPSG:4326', 'EPSG:3857'),
         zoom: 10
     });
 map.setView(mainview);
