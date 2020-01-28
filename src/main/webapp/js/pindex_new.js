@@ -52,7 +52,7 @@ var lonlat = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
 
 if(received_msg_json.contentType.localeCompare("loc")==0){
 var contents=received_msg_json.content;
-var con=contents.spilt(",");
+var con=contents.split(",");
 var centerLongitudeLatitude = ol.proj.fromLonLat([con[0], con[1]]);
 var layer = new ol.layer.Vector({
   source: new ol.source.Vector({
