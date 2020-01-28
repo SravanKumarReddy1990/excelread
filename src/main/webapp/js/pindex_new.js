@@ -46,8 +46,8 @@ var lonlat = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
 				
                ws.onmessage = function (evt) {
                   var received_msg = evt.data;
-	var received_msg_json=JSON.parse(received_msg.content);
-	console.log("received from server : "+JSON.stringify(received_msg_json));
+	//var received_msg_json=JSON.parse(received_msg.content);
+	//console.log("received from server : "+JSON.stringify(received_msg_json));
                   //alert("Message is received..."+received_msg_json.auth);
 
 if(received_msg.contentType=="loc"){
