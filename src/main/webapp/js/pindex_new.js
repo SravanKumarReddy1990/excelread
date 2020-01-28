@@ -35,7 +35,7 @@ var lonlat = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
               // alert("WebSocket is supported by your Browser!");
                
                // Let us open a web socket
-               var ws = new WebSocket("ws://part1290.herokuapp.com/chat/sravan");
+               var ws = new WebSocket("ws://part1290.herokuapp.com/chat/all");
 				
                ws.onopen = function() {
                   console.log("Connected")
@@ -49,12 +49,13 @@ var lonlat = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
 	var received_msg_json=JSON.parse(received_msg);
 	console.log("received from server : "+JSON.stringify(received_msg_json));
                   //alert("Message is received..."+received_msg_json.auth);
-		
+
+if(received_msg.alllocation==1){
 var centerLongitudeLatitude = ol.proj.fromLonLat([received_msg.longitude, received_msg.latitude]);
 var layer = new ol.layer.Vector({
   source: new ol.source.Vector({
     projection: 'EPSG:4326',
-    features: [new ol.Feature(new ol.geom.Circle(centerLongitudeLatitude, 4000))]
+    features: [new ol.Feature(new ol.geom.Circle(centerLongitudeLatitude, 40))]
   }),
   style: [
     new ol.style.Style({
@@ -69,7 +70,7 @@ var layer = new ol.layer.Vector({
   ]
 });
 map.addLayer(layer);
-
+}
 
                };
 				
