@@ -40,7 +40,7 @@ var lonlat = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
                ws.onopen = function() {
                   console.log("Connected")
                   // Web Socket is connected, send data using send()
-                  ws.send('{"from":"sravan","to":"Ram13","content":"sdmv n","status":"jsn vjsd","contentType":"usermsg"}');
+                  ws.send('{"from":"all","to":"sravan","content":"sdmv n","status":"jsn vjsd","contentType":"usermsg"}');
                   //alert("Message is sent...");
                };
 				

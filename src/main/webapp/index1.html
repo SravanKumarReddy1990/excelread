@@ -12,12 +12,12 @@
               // alert("WebSocket is supported by your Browser!");
                
                // Let us open a web socket
-               var ws = new WebSocket("ws://part1290.herokuapp.com/chat/sravan");
+               var ws = new WebSocket("ws://part1290.herokuapp.com/chat/sravans");
 				
                ws.onopen = function() {
                   console.log("Connected")
                   // Web Socket is connected, send data using send()
-                  ws.send('{"from":"sravan","to":"Ram13","content":"sdmv n","status":"jsn vjsd","contentType":"usermsg"}');
+                  ws.send('{"from":"sravans","to":"all","content":"sdmv n","status":"jsn vjsd","contentType":"usermsg"}');
                   //alert("Message is sent...");
                };
 				
