@@ -71,7 +71,7 @@ var layer = new ol.layer.Vector({
     })
   ]
 });
-map.getView().setCenter(ol.proj.transform([con[1], con[0]], 'EPSG:3857', 'EPSG:4326'));
+map.getView().setCenter(ol.proj.transform([con[0], con[1]], 'EPSG:4326', 'EPSG:3857'));
 map.getView().setZoom(5);
 map.addLayer(layer);
 }
