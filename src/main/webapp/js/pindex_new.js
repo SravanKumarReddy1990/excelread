@@ -53,26 +53,9 @@ var lonlat = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
 if(received_msg_json.contentType.localeCompare("loc")==0){
 var contents=received_msg_json.content;
 var con=contents.split(",");
-var centerLongitudeLatitude = ol.proj.fromLonLat([con[0], con[1]]);
-var layer = new ol.layer.Vector({
-  source: new ol.source.Vector({
-    projection: 'EPSG:3857',
-    features: [new ol.Feature(new ol.geom.Circle(centerLongitudeLatitude, 4000))]
-  }),
-  style: [
-    new ol.style.Style({
-      stroke: new ol.style.Stroke({
-        color: 'blue',
-        width: 3
-      }),
-      fill: new ol.style.Fill({
-        color: 'rgba(0, 0, 255, 0.1)'
-      })
-    })
-  ]
-});
+
 mainview=new ol.View({
-        center: ol.proj.transform([con[0],con[1]], 'EPSG:4326', 'EPSG:3857'),
+        center: ol.proj.fromLonLat([con[0], con[1]]),
         zoom: 10
     });
 map.setView(mainview);
