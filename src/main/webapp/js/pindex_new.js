@@ -56,7 +56,7 @@ var con=contents.split(",");
 var centerLongitudeLatitude = ol.proj.fromLonLat([con[0], con[1]]);
 var layer = new ol.layer.Vector({
   source: new ol.source.Vector({
-    projection: 'EPSG:4326',
+    projection: 'EPSG:3857',
     features: [new ol.Feature(new ol.geom.Circle(centerLongitudeLatitude, 4000))]
   }),
   style: [
