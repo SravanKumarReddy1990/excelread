@@ -55,7 +55,7 @@ var contents=received_msg_json.content;
 var con=contents.split(",");
 var format = new ol.format.WKT();
 var feature = format.readFeature(
-    'POINT(('+con[0]+','+con[1]+'))');
+    'POINT(('+con[0]+' '+con[1]+'))');
 feature.getGeometry().transform('EPSG:4326', 'EPSG:3857');
 
 var vector_layer = new ol.layer.Vector({
