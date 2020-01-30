@@ -54,9 +54,9 @@ if(received_msg_json.contentType.localeCompare("loc")==0){
 var contents=received_msg_json.content;
 var con=contents.split(",");
 var format = new ol.format.WKT();
-var feature = format.readFeature('POINT(('+con[0]+' '+con[1]+'))');
+var feature = format.readFeature('MULTIPOINT(('+con[0]+' '+con[1]+'))');
 feature.getGeometry().transform('EPSG:4326', 'EPSG:3857');
-
+	
 var vector_layer = new ol.layer.Vector({
   source: new ol.source.Vector({
     features: [feature]
