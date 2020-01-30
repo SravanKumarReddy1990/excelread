@@ -67,7 +67,7 @@ mainview=new ol.View({
         zoom: 10
     });
 var extent_layer = vector_layer.getSource().getExtent();
-map.getView().fit(extent_layer, 10);
+map.getView().fit(extent_layer, map.getSize());
 map.addLayer(vector_layer);
 }
 
