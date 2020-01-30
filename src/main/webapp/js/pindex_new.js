@@ -53,13 +53,23 @@ var lonlat = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
 if(received_msg_json.contentType.localeCompare("loc")==0){
 var contents=received_msg_json.content;
 var con=contents.split(",");
+var format = new ol.format.WKT();
+var feature = format.readFeature(
+    'POINT(('+con[0]+','+con[1]+'))');
+feature.getGeometry().transform('EPSG:4326', 'EPSG:3857');
 
+var vector_layer = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    features: [feature]
+  })
+});
 mainview=new ol.View({
         center: ol.proj.fromLonLat([con[0], con[1]]),
         zoom: 10
     });
-map.setView(mainview);
-map.addLayer(layer);
+var extent_layer = vector_layer.getSource().getExtent();
+map.getView().fit(extent_layer, map.getSize());
+map.addLayer(vector_layer);
 }
 
                };
