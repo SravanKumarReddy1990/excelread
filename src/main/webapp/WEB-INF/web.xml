@@ -90,6 +90,32 @@
   	<url-pattern>/Login</url-pattern>
   </servlet-mapping>
 
+<servlet>
+  	<description>
+  	</description>
+  	<display-name>GetAssembly</display-name>
+  	<servlet-name>GetAssembly</servlet-name>
+  	<servlet-class>com.excel.Sample.Servlet.GetAssembly</servlet-class>
+  </servlet>
+ <servlet-mapping>
+  	<servlet-name>GetAssembly</servlet-name>
+  	<url-pattern>/GetAssembly</url-pattern>
+  </servlet-mapping>
+
+
+
+<servlet>
+  	<description>
+  	</description>
+  	<display-name>GetParliament</display-name>
+  	<servlet-name>GetParliament</servlet-name>
+  	<servlet-class>com.excel.Sample.Servlet.GetParliament</servlet-class>
+  </servlet>
+ <servlet-mapping>
+  	<servlet-name>GetParliament</servlet-name>
+  	<url-pattern>/GetParliament</url-pattern>
+  </servlet-mapping>
+
 
 <servlet>
   	<description>
