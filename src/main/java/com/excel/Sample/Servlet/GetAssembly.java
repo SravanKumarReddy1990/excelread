@@ -26,8 +26,8 @@ PrintWriter out = response.getWriter();
 		String longi = request.getParameter("longi");
 String text="";
  
-					 String url = "jdbc:postgresql://ec2-23-21-160-80.compute-1.amazonaws.com:5432/d4ovlnqvutd1j7";
-            Connection connection = 							DriverManager.getConnection(url,"ckimwlfkyjkcvd","8a898408823185c78744e7bd54d71c87a4b0953ccd7271657265386796e24cbd");
+String url = "jdbc:postgresql://ec2-23-21-160-80.compute-1.amazonaws.com:5432/d4ovlnqvutd1j7";
+Connection connection = 							DriverManager.getConnection(url,"ckimwlfkyjkcvd","8a898408823185c78744e7bd54d71c87a4b0953ccd7271657265386796e24cbd");
     PreparedStatement ps = connection.prepareStatement("SELECT St_AsText(geom) FROM \"India_AC_TS_parliament\" WHERE ST_Within(ST_GeomFromText('POINT("+longi+" "+lat+")'), geom)");
 
   ResultSet rs = ps.executeQuery();
@@ -40,15 +40,7 @@ out.println(text);
 connection.close();
 
 		
-		response.setContentType("image/png");
-		response.setContentLength(byteImg.length);
 		
-		OutputStream outStream = response.getOutputStream();
-
-		outStream.write(byteImg);
-
-		outStream.flush();
-		outStream.close();
 	}
         catch(Exception e) 
         {
