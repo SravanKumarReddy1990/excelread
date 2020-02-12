@@ -30,7 +30,7 @@ String text="";
  
 String url = "jdbc:postgresql://ec2-23-21-160-80.compute-1.amazonaws.com:5432/d4ovlnqvutd1j7";
 Connection connection = DriverManager.getConnection(url,"ckimwlfkyjkcvd","8a898408823185c78744e7bd54d71c87a4b0953ccd7271657265386796e24cbd");
-   PreparedStatement ps = connection.prepareStatement("SELECT St_AsText(geom) FROM \"India_AC_TS_assem\" WHERE ST_Within(ST_GeomFromText('POINT("+longi+" "+lat+")'), geom)");
+   PreparedStatement ps = connection.prepareStatement("SELECT St_AsText(ST_Transform(geom, 4326)) geom FROM \"India_AC_TS_assem\" as t WHERE ST_Within(ST_SetSrid(ST_MakePoint("+longi+","+lat+"),4326),ST_Transform(t.geom,4326))");
 
   ResultSet rs = ps.executeQuery();
    while (rs.next()) {
