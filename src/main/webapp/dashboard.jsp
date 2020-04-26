@@ -183,7 +183,7 @@ function addURLFunction() {
 
     txt = "Hello " + person + "! How are you today?";
   }
-
+alert("<%=purl %>");
  // document.getElementById("demo").innerHTML = txt;
 }
 </script>
