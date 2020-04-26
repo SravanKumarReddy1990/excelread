@@ -55,7 +55,7 @@ public class UpdatePosts extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 				try {
-String url=request.getParameter("url");
+String purl=request.getParameter("url");
 String p_id=request.getParameter("p_id");
 String id=request.getParameter("id");
 String nn=request.getParameter("nn");
@@ -66,7 +66,7 @@ String nn=request.getParameter("nn");
             Connection conn = 							DriverManager.getConnection(url,"ckimwlfkyjkcvd","8a898408823185c78744e7bd54d71c87a4b0953ccd7271657265386796e24cbd");
 
 
-   PreparedStatement ps = conn.prepareStatement("update posts set p_display_url='"+url+"' where p_id='"+p_id+"'");
+   PreparedStatement ps = conn.prepareStatement("update posts set p_display_url='"+purl+"' where p_id='"+p_id+"'");
    ps.executeUpdate();
    ps.close();
 out.println("success");
