@@ -18,6 +18,16 @@
 	</servlet-mapping>
 	
 	
+<servlet>
+		<servlet-name>WordDocumentApp</servlet-name>
+		<servlet-class>com.excel.Sample.Servlet.WordDocumentApp</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WordDocumentApp</servlet-name>
+		<url-pattern>/WordDocumentApp</url-pattern>
+	</servlet-mapping>
+
+
   <servlet>
     <description></description>
     <display-name>ExcelSample</display-name>

@@ -164,8 +164,22 @@ function addURLFunction() {
   if (person == null || person == "") {
     txt = "User cancelled the prompt.";
   } else {
+$("button").click(function(){
+  $.post("./UpdatePosts",
+  {
+    url: person,
+    p_id: <%=resultSet.getString("p_id") %>,
+    id:  <%=tempid %>,
+    nn:  <%=resultSet.getString("nn") %>
+  },
+  function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+  });
+});
+
     txt = "Hello " + person + "! How are you today?";
   }
+
  // document.getElementById("demo").innerHTML = txt;
 }
 </script>
