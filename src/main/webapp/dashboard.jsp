@@ -156,9 +156,9 @@ while(resultSet.next()){ %>
 							<li><a href="#"><span class="glyphicon glyphicon-share"></span> 8 Shares</a></li>
 						</ul>
 						</div>
-						<div class="media-left">
+						<div class="media-right">
 							<a href="#">
-								<iframe height="300px" width="100%" src="http://www.sravankumar19.orgfree.com" name="iframe_a"></iframe>
+								<iframe height="200px" width="200px" src="http://www.sravankumar19.orgfree.com" name="iframe_a"></iframe>
 							</a>
 						</div>
 					</div>
