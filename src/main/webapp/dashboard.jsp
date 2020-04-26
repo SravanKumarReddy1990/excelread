@@ -158,7 +158,7 @@ while(resultSet.next()){ %>
 						</div>
 						<div class="media-right">
 							<a href="#">
-								<iframe height="200px" width="200px" src="http://www.sravankumar19.orgfree.com" name="iframe_a"></iframe>
+								<iframe height="200px" width="200px" src="http://www.sravankumar19.orgfree.com" name="iframe_a" scrolling="no" style="overflow:hidden;"></iframe>
 							</a>
 						</div>
 					</div>
