@@ -136,7 +136,12 @@
 
 ResultSet resultSet = conn.prepareStatement("select * from posts order by p_id DESC limit 3").executeQuery();
 
-while(resultSet.next()){ %>
+while(resultSet.next()){
+String purl=resultSet.getString("p_display_url");
+if(purl.length()==0 ||purl==null){
+purl="";
+}
+ %>
 				
 			<!-- Articles -->
 			<div class="row">
@@ -187,7 +192,7 @@ function addURLFunction() {
 						</div>
 						<div class="media-right">
 							<a href="#">
-								<iframe height="200px" width="200px" src="http://www.sravankumar19.orgfree.com" name="iframe_a" scrolling="no" style="overflow:hidden;"></iframe>
+								<iframe height="200px" width="200px" src="<%=purl %>" name="iframe_a" scrolling="no" style="overflow:hidden;"></iframe>
 							</a>
 						</div>
 					</div>

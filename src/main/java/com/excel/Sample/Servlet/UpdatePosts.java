@@ -72,7 +72,7 @@ String nn=request.getParameter("nn");
 out.println("success");
     HttpSession session=request.getSession();  
         session.setAttribute("id",id); 
-response.sendRedirect("dashboard.jsp?id="+id+"&tempid="+nn);
+//response.sendRedirect("dashboard.jsp?id="+id+"&tempid="+nn);
 
 
 				} catch (Exception e) {
