@@ -24,13 +24,13 @@ import javax.servlet.http.*;
 /**
  * Servlet implementation class ExcelSample
  */
-public class Login extends HttpServlet {
+public class UpdatePosts extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public Login() {
+	public UpdatePosts() {
 		super();
 
 		// TODO Auto-generated constructor stubs
