@@ -164,7 +164,7 @@ function addURLFunction() {
   if (person == null || person == "") {
     txt = "User cancelled the prompt.";
   } else {
-$("button").click(function(){
+
   $.post("./UpdatePosts",
   {
     url: person,
@@ -175,7 +175,6 @@ $("button").click(function(){
   function(data, status){
     alert("Data: " + data + "\nStatus: " + status);
   });
-});
 
     txt = "Hello " + person + "! How are you today?";
   }
