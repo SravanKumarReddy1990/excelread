@@ -163,7 +163,7 @@ purl="";
 						
 						<ul class="list-inline">
 
-							<li><a href="#" onclick="addURLFunction()"><span class="glyphicon glyphicon-comment"></span>ADD URL</a></li>
+							<li><a href="#" onclick="addURLFunction('<%=resultSet.getString("p_id") %>')"><span class="glyphicon glyphicon-comment"></span>ADD URL</a></li>
 						</ul>
 						</div>
 						<div class="media-right">
@@ -291,7 +291,7 @@ conn.close();
     }
 </style>
 <script>
-function addURLFunction() {
+function addURLFunction(pid) {
   var txt;
   var person = prompt("Please enter your url:", "www.");
   if (person == null || person == "") {
@@ -301,7 +301,7 @@ function addURLFunction() {
   $.post("./UpdatePosts",
   {
     url: person,
-    p_id: "<%=resultSet.getString("p_id") %>",
+    p_id: pid,
     id:  "<%=request.getParameter("id") %>",
     nn:  "<%= tempid%>"
   },
