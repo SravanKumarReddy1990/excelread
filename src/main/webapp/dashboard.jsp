@@ -162,31 +162,7 @@ purl="";
 						</ul>
 						
 						<ul class="list-inline">
-<script>
-function addURLFunction() {
-  var txt;
-  var person = prompt("Please enter your url:", "www.");
-  if (person == null || person == "") {
-    txt = "User cancelled the prompt.";
-  } else {
 
-  $.post("./UpdatePosts",
-  {
-    url: person,
-    p_id: "<%=resultSet.getString("p_id") %>",
-    id:  "<%=request.getParameter("id") %>",
-    nn:  "<%= tempid%>"
-  },
-  function(data, status){
-    alert("Data: " + data + "\nStatus: " + status);
-  });
-
-    txt = "Hello " + person + "! How are you today?";
-  }
-alert("<%=purl %>");
- // document.getElementById("demo").innerHTML = txt;
-}
-</script>
 							<li><a href="#" onclick="addURLFunction()"><span class="glyphicon glyphicon-comment"></span>ADD URL</a></li>
 						</ul>
 						</div>
@@ -314,7 +290,31 @@ conn.close();
         margin: auto;
     }
 </style>
+<script>
+function addURLFunction() {
+  var txt;
+  var person = prompt("Please enter your url:", "www.");
+  if (person == null || person == "") {
+    txt = "User cancelled the prompt.";
+  } else {
 
+  $.post("./UpdatePosts",
+  {
+    url: person,
+    p_id: "<%=resultSet.getString("p_id") %>",
+    id:  "<%=request.getParameter("id") %>",
+    nn:  "<%= tempid%>"
+  },
+  function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+  });
+
+    txt = "Hello " + person + "! How are you today?";
+  }
+//alert("<%=purl %>");
+ // document.getElementById("demo").innerHTML = txt;
+}
+</script>
 <!-- you need to include the shieldui css and js assets in order for the charts to work -->
 
 <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css" />
