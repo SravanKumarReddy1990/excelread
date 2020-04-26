@@ -170,7 +170,7 @@ $("button").click(function(){
     url: person,
     p_id: <%=resultSet.getString("p_id") %>,
     id:  <%=tempid %>,
-    nn:  <%=resultSet.getString("nn") %>
+    nn:  <%=request.getParameter("nn") %>
   },
   function(data, status){
     alert("Data: " + data + "\nStatus: " + status);
