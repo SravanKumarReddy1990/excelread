@@ -168,9 +168,9 @@ $("button").click(function(){
   $.post("./UpdatePosts",
   {
     url: person,
-    p_id: <%=resultSet.getString("p_id") %>,
-    id:  <%=tempid %>,
-    nn:  <%=request.getParameter("nn") %>
+    p_id: "<%=resultSet.getString("p_id") %>",
+    id:  "<%=request.getParameter("id") %>",
+    nn:  "<%= tempid%>"
   },
   function(data, status){
     alert("Data: " + data + "\nStatus: " + status);
