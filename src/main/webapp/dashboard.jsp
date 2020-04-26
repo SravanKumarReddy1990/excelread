@@ -155,6 +155,22 @@ while(resultSet.next()){ %>
 							<li><a href="#"><span class="glyphicon glyphicon-comment"></span> 2 Comments</a></li>
 							<li><a href="#"><span class="glyphicon glyphicon-share"></span> 8 Shares</a></li>
 						</ul>
+						
+						<ul class="list-inline">
+<script>
+function addURLFunction() {
+  var txt;
+  var person = prompt("Please enter your url:", "www.");
+  if (person == null || person == "") {
+    txt = "User cancelled the prompt.";
+  } else {
+    txt = "Hello " + person + "! How are you today?";
+  }
+ // document.getElementById("demo").innerHTML = txt;
+}
+</script>
+							<li><a href="#"><span class="glyphicon glyphicon-comment"></span>ADD URL</a></li>
+						</ul>
 						</div>
 						<div class="media-right">
 							<a href="#">
