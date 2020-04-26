@@ -138,7 +138,7 @@ ResultSet resultSet = conn.prepareStatement("select * from posts order by p_id D
 
 while(resultSet.next()){
 String purl=resultSet.getString("p_display_url");
-if(purl!==null){
+if(purl!=null){
 purl="";
 }
  %>
