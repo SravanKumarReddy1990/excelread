@@ -169,7 +169,7 @@ function addURLFunction() {
  // document.getElementById("demo").innerHTML = txt;
 }
 </script>
-							<li><a href="#"><span class="glyphicon glyphicon-comment"></span>ADD URL</a></li>
+							<li><a href="#" onclick="addURLFunction()"><span class="glyphicon glyphicon-comment"></span>ADD URL</a></li>
 						</ul>
 						</div>
 						<div class="media-right">
