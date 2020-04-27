@@ -191,7 +191,7 @@ conn.close();
             <div class="form-group" style="background-color:powderblue;">
                 <input type="text" class="form-control" name="title" placeholder="Title">
             </div>
-            <textarea id="editor" cols="33" name="desc" rows="12"></textarea>
+            <textarea id="editor" cols="33" name="desc" rows="18"></textarea>
             <br>
             <div class="form-group" style="background-color:powderblue;">
                 <input type="hidden" class="form-control" value="<%= tempid %>" name="tempid" placeholder="Tags">
