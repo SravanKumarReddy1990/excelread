@@ -182,7 +182,7 @@ conn.close();
 
 
 	  <!-- Right Column -->
-	  <div class="col-sm-3">
+	  <div class="col-sm-3" style="background-color:powderblue;">
  
 			<!-- Form --> 
 			<div class="panel panel-default">
