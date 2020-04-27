@@ -147,11 +147,13 @@ purl="";
 			<div class="row">
 				<article class="col-xs-12">
 					<div class="media">
+<!-- 
 						<div class="media-left">
 							<a href="#">
 								<img class="media-object" src="http://part1290.herokuapp.com/DisplayImage?imgid=962683" height="100" weight="100" alt="">
 							</a>
 						</div>
+-->
 						<div class="media-body">
 							<h2 class="media-heading"><a href="#"><%=resultSet.getString("p_title") %></a></h2>
 							<p><%=resultSet.getString("p_desc") %></p>
