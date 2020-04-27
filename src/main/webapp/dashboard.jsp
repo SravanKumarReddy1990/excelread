@@ -185,18 +185,18 @@ conn.close();
 	  <div class="col-sm-3" style="background-color:powderblue;">
  
 			<!-- Form --> 
-			<div class="panel panel-default">
+			<div class="panel panel-default" style="background-color:powderblue;">
         
                             <form action="./CreatePost" method="post">
-            <div class="form-group">
+            <div class="form-group" style="background-color:powderblue;">
                 <input type="text" class="form-control" name="title" placeholder="Title">
             </div>
             <textarea id="editor" cols="33" name="desc" rows="12"></textarea>
             <br>
-            <div class="form-group">
+            <div class="form-group" style="background-color:powderblue;">
                 <input type="hidden" class="form-control" value="<%= tempid %>" name="tempid" placeholder="Tags">
             </div>
-            <div class="form-group">
+            <div class="form-group" style="background-color:powderblue;">
                 <input type="submit" class="btn btn-primary" id="submit" value="Create Post"></input>
             </div>
        </form>
